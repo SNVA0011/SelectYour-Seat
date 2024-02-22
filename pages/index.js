@@ -15,7 +15,6 @@ export default function Home(props) {
         <title>Select Your Seat</title>
       </Head>
 
-
       <Container>
         <Row>
           <Col xs={12} lg={8} xl={9}>
