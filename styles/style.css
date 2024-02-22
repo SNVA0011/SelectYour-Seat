@@ -1,0 +1,43 @@
+body {
+    background: #f3f7ff;
+    padding: 50px 0;
+}
+
+@media screen and (min-width: 1200px)  {
+    *::-webkit-scrollbar {
+        width: 12px;
+    }
+
+    *::-webkit-scrollbar-track {
+        background: #ffffff;
+    }
+
+    *::-webkit-scrollbar-thumb {
+        background-color: #dee1e7;
+        border-radius: 6px;
+        border: 3px solid #ffffff;
+        height: 100px;  
+    }
+
+    *::-webkit-scrollbar-thumb:hover {
+        background-color: #cfd4dc;
+    }
+
+    .container {
+        max-width: 1261px;
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+}
+
+@media screen and (min-width: 1400px) and (max-width: 1500px) {
+    .container {
+        max-width: 92%;
+    }
+}
+
+@media screen and (min-width: 1200px) and (max-width: 1399px) {
+    .container {
+        max-width: 100%;
+    }
+}
