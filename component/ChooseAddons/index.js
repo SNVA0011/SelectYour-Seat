@@ -17,7 +17,7 @@ const index = ({ Json, Type}) => {
             <ul className={style.ChsaddUl}> 
                 {Json && Json.map((item, index) => {
                      return (
-                        <li className={`${selected[`${index}`] ? style.Active : ""}`}  style={{animationDelay : `${index * 100}ms`}}>
+                        <li className={`${selected[`${index}`] ? style.Active : ""}`}>
                             <div className='d-flex align-items-center'>
                                 <div className={style.ChsaddImg}>
                                     <div className={style.ChsaddImgInner}> 

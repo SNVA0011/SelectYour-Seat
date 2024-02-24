@@ -1,0 +1,78 @@
+.FlightOfdealBtn {
+    font-size: 16px;
+    font-style: normal;
+    line-height: normal;
+    font-weight: 700; 
+    height: 40px;
+    border-radius: 4px;
+    position: relative;
+    overflow: hidden;
+    min-width: 128px;
+    background: #DC391B;
+    border-color: #DC391B;
+}
+
+.FlightOfdealBtn:hover{
+    background : #c53318 !important
+}
+
+.FlightOfdealBtn:focus,
+.FlightOfdealBtn:active,
+.FlightOfdealBtn:hover {
+    box-shadow: none !important;
+}
+.FlightOfdealBtn span{
+    position: relative;
+    z-index: 2;
+}
+
+.FlightOfdealBtn:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.50);
+    transition: none;
+    transform: skewX(-20deg);
+    -webkit-transform: skewX(-20deg);
+    -moz-transform: skewX(-20deg);
+    -ms-transform: skewX(-20deg);
+    -o-transform: skewX(-20deg);
+    transform-origin: top left;
+    -webkit-transform-origin: top left;
+    -moz-transform-origin: top left;
+    -ms-transform-origin: top left;
+    -o-transform-origin: top left;
+    filter: blur(4px);
+    -webkit-filter: blur(4px);
+    -moz-filter: blur(4px);
+    -ms-filter: blur(4px);
+    -o-filter: blur(4px);
+}
+
+.FlightOfdealBtn:hover:after {
+    width: 150%;
+    background-color: hsla(0, 0%, 100%, 0);
+    transition: all .4s ease-in-out;
+    transition-delay: .12s;
+    -webkit-transition-delay: .12s;
+    -moz-transition-delay: .12s;
+    -ms-transition-delay: .12s;
+    -o-transition-delay: .12s;
+}
+
+
+.FlightOfdealBtn.OutlineClr {
+    background: #ffffff;
+    border-color: #DC391B;
+    color: #DC391B;  
+} 
+
+.FlightOfdealBtn.OutlineClr:hover,
+.FlightOfdealBtn.OutlineClr:active,
+.FlightOfdealBtn.OutlineClr:focus {
+    background: #DC391B;
+    color: #ffffff;  
+    }

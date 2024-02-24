@@ -1,0 +1,23 @@
+.SkipContinue{
+    margin-top: 21px;
+}
+
+.SkiptoBtn{
+    color: #3BA7BF;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    padding: 0;
+}
+
+button.SkiptoBtn:hover{
+    color: #2f8598;
+}
+
+.SkiptoBtn:focus,
+.SkiptoBtn:active,
+.SkiptoBtn:hover {
+    box-shadow: none;
+    text-decoration: none;
+}
