@@ -1,4 +1,4 @@
-.FillChsSeat{
+.FillChsSeat {
     max-height: 700px;
     min-height: 700px;
     overflow-y: auto;
@@ -6,66 +6,302 @@
     text-align: center;
 }
 
-.AirplaneWrapper{
+.AirplaneWrapper {
     width: 100%;
     max-width: 393px;
-    height: 2256px;
+    height: auto;
     display: inline-block;
     background-image: url('../../public/images/addon/airplaneseat-bg.png');
     background-size: 100% 100%;
     background-repeat: no-repeat;
     background-position: top center;
 }
-.AirplaneBxHeader{
+
+.AirplaneWrapper::after{
+    content: '';
+    background-image: url('https://jsak.mmtcdn.com/flights/assets/media/ic_flightSmallTail.aa15f774.png');
+}
+
+.AirplaneBxHeader {
     padding-top: 22%;
     padding-bottom: 10%;
 }
-.AirplaneBxHeader img{
+
+.AirplaneBxFooter{
+    padding-bottom: 20%;
+}
+
+.AirplaneBxHeader img {
     width: 80%;
     display: inline-block;
 }
- 
 
-.AirplaneWrapper, .AirplaneBxHeader img{
+
+.AirplaneWrapper,
+.AirplaneBxHeader img {
     image-rendering: -webkit-optimize-contrast;
 }
 
 .AirPlTable th,
 .AirPlTable td,
-.AirPlTable{ 
+.AirPlTable {
     font-size: 12px;
     font-style: normal;
     line-height: normal;
 }
 
-.AirPlTable thead{}
-.AirPlTable tbody{}
+.AirPlTable thead {}
+
+.AirPlTable tbody {}
 
 .AirPlTable th,
-.AirPlTable td{
-    padding: 2px; 
+.AirPlTable td {
+    padding: 2px;
 }
-
-.AirPlTable thead th{
+ 
+.AirPlTable thead th {
     padding-bottom: 8px;
     font-weight: 600
+}
+
+.AirPlTable tbody td{
+    padding-bottom: 15px;
 }
 
 
 .AirPlTable th,
 .AirPlTable td,
 .AirPlTable tbody td,
-.AirPlTable thead th{
+.AirPlTable thead th {
     border: none;
     vertical-align: middle;
 }
 
-.AirPlSpace{
+.AirPlSpace {
     width: 20px;
 }
 
-.AirPlRowName{
-    width: 32px;
+.AirPlRowName {
+    width: 26px;
     color: #dc391b;
     font-weight: 600;
+}
+
+.SeatDef {
+    width: 40px;
+    height: 40px;
+    background-color: #ffffff;
+    border: solid 1px #eeeeee;
+    color: #333; 
+font-size: 12px;
+font-style: normal;
+font-weight: 500;
+line-height: normal;
+border-radius: 8px;
+padding: 4px;
+position: relative;
+-webkit-transition: all 200ms ease;
+-o-transition: all 200ms ease;
+-moz-transition: all 200ms ease;
+transition: all 200ms ease; 
+}
+.SeatDef:focus,
+.SeatDef:hover,
+.SeatDef:active{
+    box-shadow: none;
+} 
+.SeatDef:hover{
+    z-index: 2;
+    -webkit-box-shadow: 0 20px 25px -5px rgb(0 0 0 / 10%), 0 8px 50px 4px rgb(0 0 0 / 10%);
+    -moz-box-shadow: 0 20px 25px -5px rgb(0 0 0 / 10%), 0 8px 50px 4px rgb(0 0 0 / 10%);
+         box-shadow: 0 20px 25px -5px rgb(0 0 0 / 10%), 0 8px 50px 4px rgb(0 0 0 / 10%);
+}
+.SeatDef.Disable{
+   background-color: #e1e1e1;
+   border-color: #e1e1e1;
+   cursor: no-drop;
+   opacity: 1;
+   background-image: url('../../public/images/addon/occupied-seat.png');
+   background-size: auto;
+   background-repeat: no-repeat;
+   background-position: center;
+   
+}
+.SeatDef.Disable .SeatDefTooltio{
+background-color: #f84341;
+}
+.SeatDef.Disable .SeatDefTooltio::after{
+    border-color: #f84341 transparent transparent transparent;
+}
+.SeatDef.Disable{
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+         box-shadow: none;
+}
+
+ 
+.SeatDef.Disable{
+    font-size: 0;
+}
+
+
+
+.SeatDef.DarkBl{
+    background-color: #1E568F;
+    border-color: #1E568F;
+    color: #ffffff;
+}
+.SeatDef.LightGr{
+    background-color: #66e7ca;
+    border-color: #66e7ca;
+    color: #0e5948;
+}
+.SeatDef.LightBl{
+    background-color: #d3e8ff;
+    border-color: #d3e8ff;
+    color: #003f87;
+}
+
+.SeatDef.Active{ 
+    font-size: 0; 
+}
+
+.SeatDef::before{
+    content: '';
+    position: absolute;
+    background-color: #36C24D;
+    left: 0;
+    bottom: 0;
+    width:  100%;
+    height: 0;
+    -webkit-transition: all 220ms cubic-bezier(0.5, 0, 0, 1.25);
+    -o-transition: all 220ms cubic-bezier(0.5, 0, 0, 1.25);
+    -ms-transition: all 220ms cubic-bezier(0.5, 0, 0, 1.25);
+    -moz-transition: all 220ms cubic-bezier(0.5, 0, 0, 1.25);
+    transition: all 220ms cubic-bezier(0.5, 0, 0, 1.25); 
+    border-radius: 8px;
+}
+.SeatDef::after{
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%,-50%);
+    -moz-transform: translate(-50%,-50%);
+    -ms-transform: translate(-50%,-50%);
+    -o-transform: translate(-50%,-50%);
+    transform: translate(-50%,-50%);
+    width: 0;
+    height: 100%; 
+    background-image: url('../../public/images/addon/selected-seat.png');
+    background-size: 54%;
+    background-repeat: no-repeat;
+    background-position: center;
+    -webkit-transition: all 160ms cubic-bezier(0.46, 0.03, 0.52, 0.96);
+    -o-transition: all 160ms cubic-bezier(0.46, 0.03, 0.52, 0.96);
+    -moz-transition: all 160ms cubic-bezier(0.46, 0.03, 0.52, 0.96);
+    transition: all 160ms cubic-bezier(0.46, 0.03, 0.52, 0.96);
+    z-index: 2;
+}
+
+.SeatDef.Active::before{ 
+    height:  100%;  
+}
+.SeatDef.Active::after{
+    width:  100%; 
+    -webkit-animation-name: zoomIn;
+    animation-name: zoomIn;
+    -webkit-animation-duration: 200ms;
+    animation-duration: 200ms; 
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+}
+
+.AirplaneBxBody{
+    padding: 0 6px
+}
+
+ .SeatDefTooltio { 
+    font-size: 12px;
+    text-align: center;
+    position: absolute;
+    display: none;
+    left: 50%;
+    -webkit-transform: translate(-50%);
+    -moz-transform: translate(-50%);
+    -ms-transform: translate(-50%);
+    -o-transform: translate(-50%);
+    transform: translate(-50%);
+    background: #000000;
+    border-radius: 6px;
+    padding: 8px 10px;
+    color: #ffffff;
+    z-index: 1;
+    margin-bottom: 8px;
+    font-weight: 600;
+    bottom: 100%;  
+} 
+.SeatDefTooltio::after { 
+    content: '';
+    position: absolute;
+    left: 50%; 
+    -webkit-transform: translate(-50%);
+       -moz-transform: translate(-50%);
+        -ms-transform: translate(-50%);
+         -o-transform: translate(-50%);
+            transform: translate(-50%); 
+            width: 0px;
+            height: 0px;
+            border-style: solid;
+            border-width: 6px 12px 0;
+            border-color: #000000 transparent transparent transparent;
+            top: 100%;
+            margin-top: -2px;
+}
+
+
+.SeatDef:hover .SeatDefTooltio{
+    display: block; 
+    -webkit-animation-name: zoomIn;
+    animation-name: zoomIn;
+    -webkit-animation-duration: 200ms;
+    animation-duration: 200ms; 
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+    -webkit-transform-origin: bottom left;
+    transform-origin: bottom left;
+}
+ 
+@-webkit-keyframes zoomIn {
+    0% {
+    opacity: 0;
+    -webkit-transform: scale3d(0.7, 0.7, 0.7) translate(-50%);
+    transform: scale3d(0.7, 0.7, 0.7) translate(-50%);
+    }
+    50% {
+    opacity: 1;
+    }
+    }
+    @keyframes zoomIn {
+    0% {
+    opacity: 0;
+    -webkit-transform: scale3d(0.7, 0.7, 0.7) translate(-50%);
+    transform: scale3d(0.7, 0.7, 0.7) translate(-50%);
+    }
+    50% {
+    opacity: 1;
+    }
+    }
+
+.SeatDefTooltio span{
+    color: #36C24D; 
+    font-weight: 800;
+   display: block;
+   margin-top: 2px
+   ;
+}
+
+.SeatDef.Disable::before,
+.SeatDef.Disable::after{
+display: none;
 }

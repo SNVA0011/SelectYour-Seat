@@ -17,7 +17,6 @@ import Nav from 'react-bootstrap/Nav';
 const index = () => {
   const [key, setKey] = useState(0);
 
-
   return (
     <>
       <div className={style.StepTitle}>
