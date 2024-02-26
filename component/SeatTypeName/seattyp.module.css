@@ -1,0 +1,58 @@
+.SeatTypeName{
+    border-radius: 10px;
+background: #FFF2F0;
+margin: 30px 0;
+padding: 20px;
+font-family: 'Mulish', sans-serif;
+}
+
+.SeatTypeName p{
+    color: #5A5A5A; 
+font-size: 10px;
+font-style: normal;
+font-weight: 500;
+line-height: 16px; 
+margin-bottom: 0; 
+}
+
+.SeatTypeName ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.SeatTypeName ul li{
+    margin-bottom: 20px;
+    color:#333; 
+font-size: 14px;
+font-style: normal;
+font-weight: 500;
+line-height: normal;
+width: 100%;
+} 
+
+.SeatTypeName label{
+    width: 20px;
+height: 20px;
+display: inline-block;
+margin-right: 10px;
+margin-bottom: 0;
+border-radius: 4px;
+
+}
+
+.SeatTypeName label.ClrGreen{
+    background: #50E3C2;
+}
+
+.SeatTypeName label.ClrLightBl{
+    background: #BADAFF;
+}
+
+.SeatTypeName label.ClrDarkBl{
+    background: #1E568F;
+}
+
+.SeatTypeName label.ClrGray{
+    background: #CFCFCF;
+}

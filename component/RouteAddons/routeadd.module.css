@@ -4,6 +4,10 @@
     border: none;
     padding: 2px 2px 3px;
     margin-bottom: 30px;
+    -webkit-user-select: none;
+   -moz-user-select: none;
+    -ms-user-select: none;
+        user-select: none;
 }
 .TabAddonRoute{
     position: relative;
@@ -66,16 +70,16 @@ left: -2px;
     position: relative;
     -webkit-animation-name: fadeInUp;
     animation-name: fadeInUp;
-    -webkit-animation-duration: 220ms;
-    animation-duration: 220ms; 
+    -webkit-animation-duration: 260ms;
+    animation-duration: 260ms; 
 } 
 
 
 @-webkit-keyframes fadeInUp {
     0% {
         opacity: 0;
-        -webkit-transform: translate3d(4%, 0, 0);
-        transform: translate3d(4%, 0, 0);
+        -webkit-transform: translate3d(0, 6%, 0);
+        transform: translate3d(0, 6%, 0);
     }
 
     100% {
@@ -88,8 +92,8 @@ left: -2px;
 @keyframes fadeInUp {
     0% {
         opacity: 0;
-        -webkit-transform: translate3d(4%, 0, 0);
-        transform: translate3d(4%, 0, 0);
+        -webkit-transform: translate3d(0, 6%, 0);
+        transform: translate3d(0, 6%, 0);
     }
 
     100% {

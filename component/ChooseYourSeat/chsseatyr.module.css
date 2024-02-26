@@ -1,0 +1,71 @@
+.FillChsSeat{
+    max-height: 700px;
+    min-height: 700px;
+    overflow-y: auto;
+    font-family: 'Mulish', sans-serif;
+    text-align: center;
+}
+
+.AirplaneWrapper{
+    width: 100%;
+    max-width: 393px;
+    height: 2256px;
+    display: inline-block;
+    background-image: url('../../public/images/addon/airplaneseat-bg.png');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: top center;
+}
+.AirplaneBxHeader{
+    padding-top: 22%;
+    padding-bottom: 10%;
+}
+.AirplaneBxHeader img{
+    width: 80%;
+    display: inline-block;
+}
+ 
+
+.AirplaneWrapper, .AirplaneBxHeader img{
+    image-rendering: -webkit-optimize-contrast;
+}
+
+.AirPlTable th,
+.AirPlTable td,
+.AirPlTable{ 
+    font-size: 12px;
+    font-style: normal;
+    line-height: normal;
+}
+
+.AirPlTable thead{}
+.AirPlTable tbody{}
+
+.AirPlTable th,
+.AirPlTable td{
+    padding: 2px; 
+}
+
+.AirPlTable thead th{
+    padding-bottom: 8px;
+    font-weight: 600
+}
+
+
+.AirPlTable th,
+.AirPlTable td,
+.AirPlTable tbody td,
+.AirPlTable thead th{
+    border: none;
+    vertical-align: middle;
+}
+
+.AirPlSpace{
+    width: 20px;
+}
+
+.AirPlRowName{
+    width: 32px;
+    color: #dc391b;
+    font-weight: 600;
+}

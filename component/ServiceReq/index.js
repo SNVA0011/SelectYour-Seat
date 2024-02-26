@@ -1,11 +1,14 @@
 import React, { useState } from 'react'
 import ChooseAddons from '../ChooseAddons'
 import RouteAddons from '../RouteAddons'
+import SeatTypeName from '../SeatTypeName'
 import CartAddons from '../CartAddons'
 import SkiptoAddons from '../SkiptoAddons'
+import SeatTypeDepRet from '../SeatTypeDepRet'
+import ChooseYourSeat from '../ChooseYourSeat'
 import style from './servicerq.module.css'
 import { allMeals } from '../JsonAddon'
-import { allBaggage } from '../JsonAddon'
+import { allBaggage } from '../JsonAddon' 
 import { Col, Row } from 'react-bootstrap'
 import Tab from 'react-bootstrap/Tab';
 import Nav from 'react-bootstrap/Nav';
@@ -14,7 +17,6 @@ import Nav from 'react-bootstrap/Nav';
 const index = () => {
   const [key, setKey] = useState(0);
 
-  console.log('key-', key)
 
   return (
     <>
@@ -27,18 +29,18 @@ const index = () => {
         {key < 3 ? <div className='w-100'>
           <Tab.Container onSelect={(k) => setKey(k)} activeKey={key} value={key}>
             <Nav variant="pills" className={style.ServiceTbNav}>
-              <Nav.Item className={style.SerTbNavItem}>
-                <Nav.Link className={style.SerTbNavBtn} eventKey={0}>
+              <Nav.Item className={`${style.SerTbNavItem}`}>
+                <Nav.Link className={`${style.SerTbNavBtn} ${style.One}`} eventKey={0}>
                  <img src='/images/addon/car-seat-icon.png' /> Select Seat
                 </Nav.Link>
               </Nav.Item>
-              <Nav.Item className={style.SerTbNavItem}>
-                <Nav.Link className={style.SerTbNavBtn} eventKey={1}>
+              <Nav.Item className={`${style.SerTbNavItem}`}>
+                <Nav.Link className={`${style.SerTbNavBtn} ${style.Two}`} eventKey={1}>
                  <img src='/images/addon/hot-meal-icon.png' /> Add Meals
                 </Nav.Link>
               </Nav.Item>
-              <Nav.Item className={style.SerTbNavItem}>
-                <Nav.Link className={style.SerTbNavBtn} eventKey={2}>
+              <Nav.Item className={`${style.SerTbNavItem}`}>
+                <Nav.Link className={`${style.SerTbNavBtn} ${style.Three}`} eventKey={2}>
                  <img src='/images/addon/bag-suitcase-icon.png' /> Add Baggage
                 </Nav.Link>
               </Nav.Item>
@@ -50,9 +52,12 @@ const index = () => {
                   <Col xs={12} md={4}>
                     <RouteAddons Type={'AddSeat'} />
 
+                    <SeatTypeName />
+
+                    <SeatTypeDepRet />
                   </Col>
                   <Col xs={12} md={8}>
-
+                    <ChooseYourSeat />
                   </Col>
                 </Row>
 

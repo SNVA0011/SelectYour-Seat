@@ -1,0 +1,58 @@
+.DepSeatType{
+    border-radius: 10px;
+background: #FFF2F0;
+padding: 5px 20px;
+font-family: 'Mulish', sans-serif;
+font-size: 10px;
+font-style: normal;
+font-weight: 600;
+line-height: normal;
+}
+.DepSeatType ul{
+    margin: 0;
+    padding: 0;
+    list-style: none; 
+}
+.DepSeatType label{
+    color:#DC391B;  
+}
+.DepSeatType span{
+    display: block;
+    color: #A5A5A5;
+    font-weight: 600;
+}
+.DepSeatType ul li{
+    margin-bottom: 10px;
+    font-weight: 500;
+}
+.DepSeatType ul li:last-child{
+    margin-bottom: 5px;
+}
+.DepSeatType ul li b{
+    font-weight: 700;
+} 
+
+.DepSeatType label{
+    border-bottom: solid 1px #a5a5a5;
+    width: 100%;
+    padding-bottom: 5px;
+    padding-top: 2px;
+    margin-bottom: 10px;
+}
+
+.DepSeatLeft{
+    border-left: solid 1px #a5a5a5; 
+}
+.DepSeatRow{
+   margin: 0; 
+}
+.DepSeatCol{
+padding: 0;
+}
+
+.DepSeatLeftWd{
+    padding-left: 11px;
+}
+.DepSeatLeftMs{
+    padding-right: 11px;
+}
