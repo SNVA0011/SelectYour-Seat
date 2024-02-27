@@ -1,8 +1,9 @@
-.ChsaddWrapper{
-    max-height: 700px;
+.ChsaddWrapper {
+    max-height: 652px;
     overflow-y: auto;
     font-family: 'Mulish', sans-serif;
 }
+
 .ChsaddImgInner {
     position: relative;
     padding-top: 100%;
@@ -12,12 +13,14 @@
     border-radius: 4px;
     overflow: hidden;
 }
-.ChsMealtype, .ChsaddImgInner img{
+
+.ChsMealtype,
+.ChsaddImgInner img {
     -ms-interpolation-mode: nearest-neighbor;
-        image-rendering: -webkit-optimize-contrast;
-        image-rendering: -moz-crisp-edges;
-        image-rendering: -o-pixelated;
-        image-rendering: pixelated;
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: -moz-crisp-edges;
+    image-rendering: -o-pixelated;
+    image-rendering: pixelated;
 }
 
 .ChsaddImg {
@@ -37,13 +40,13 @@
     margin: 0;
     max-width: 246px;
     width: 100%;
-    line-height: 20px;
+    line-height: 1.6;
 }
 
 .ChsaddUl {
     padding: 0;
     margin: 0;
-    list-style: none; 
+    list-style: none;
     color: #333333;
     font-size: 14px;
     font-style: normal;
@@ -59,9 +62,15 @@
     -o-transition: all 300ms ease;
     -moz-transition: all 300ms ease;
     transition: all 300ms ease;
+    -webkit-box-shadow: 0 3px 4px -2px rgb(0 0 0 / 4%), 0 1px 3px -2px rgb(0 0 0 / 3%);
+    -moz-box-shadow: 0 3px 4px -2px rgb(0 0 0 / 4%), 0 1px 3px -2px rgb(0 0 0 / 3%);
+    -o-box-shadow: 0 3px 4px -2px rgb(0 0 0 / 4%), 0 1px 3px -2px rgb(0 0 0 / 3%);
+    -ms-box-shadow: 0 3px 4px -2px rgb(0 0 0 / 4%), 0 1px 3px -2px rgb(0 0 0 / 3%);
+         box-shadow: 0 3px 4px -2px rgb(0 0 0 / 4%), 0 1px 3px -2px rgb(0 0 0 / 3%);
 }
 
-.ChsaddUl li.Active,.ChsaddUl li.Active:hover{
+.ChsaddUl li.Active,
+.ChsaddUl li.Active:hover {
     border-color: #dc391b;
     background-color: #fef9f8;
 }
@@ -88,6 +97,8 @@
     width: 76px;
     position: relative;
     overflow: hidden;
+    padding-left: 4px;
+    padding-right: 4px;
 }
 
 
@@ -178,12 +189,13 @@
 
 .ChsPrice.Active {
     -webkit-animation-name: bounceIn;
-    animation-name: bounceIn; 
+    animation-name: bounceIn;
     -webkit-animation-duration: 1s;
     animation-duration: 1s;
     -webkit-animation-fill-mode: both;
     animation-fill-mode: both;
 }
+
 @-webkit-keyframes bounceIn {
 
     0%,
@@ -269,3 +281,67 @@
         transform: scale3d(1, 1, 1);
     }
 }
+
+
+
+/* responsive */
+@media only screen and (max-width:1399px) {
+    .ChsaddUl li {
+        border-radius: 8px;
+        padding: 14px;
+        margin-bottom: 18px;
+    }
+    .ChsaddImg {
+        width: 46px;
+        min-width: 46px;
+    }
+}
+
+@media only screen and (max-width:1299px) {
+    .ChsaddUl li { 
+        padding: 12px;
+        margin-bottom: 16px;
+    }
+    .ChsaddUl {
+        font-size: 13px;
+    }
+    .ChsaddImg {
+        width: 44px;
+        min-width: 44px;
+    }
+}
+
+@media only screen and (max-width:1199px) {
+    .ChsaddUl li {  
+        margin-bottom: 14px;
+    }
+    .ChsaddUl {
+        font-size: 12px;
+    }
+    
+.ChsaddBody p { 
+    line-height: 1.5;
+} 
+
+.ChsaddBtn {
+    width: 70px;
+    font-size: 11px;
+}
+.ChsaddImg {
+    width: 42px;
+    min-width: 42px;
+}
+
+}
+
+@media only screen and (max-width:991px) {}
+
+@media only screen and (max-width:767px) {
+    .ChsaddWrapper {
+        max-height: 450px;
+    }
+}
+
+@media only screen and (max-width:575px) {}
+
+@media only screen and (max-width:425px) {}

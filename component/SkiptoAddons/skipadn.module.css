@@ -21,3 +21,22 @@ button.SkiptoBtn:hover{
     box-shadow: none;
     text-decoration: none;
 }
+
+
+
+/* responsive */
+@media only screen and (min-width:1200px) {}
+
+@media only screen and (max-width:1199px) {}
+
+@media only screen and (max-width:991px) {}
+
+@media only screen and (max-width:767px) {}
+
+@media only screen and (max-width:575px) {}
+
+@media only screen and (max-width:425px) {
+    .SkiptoBtn{
+        font-size: 13px;
+    }
+}

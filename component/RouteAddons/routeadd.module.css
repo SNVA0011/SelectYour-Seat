@@ -1,32 +1,34 @@
-.TabAddonRoute ul{
+.TabAddonRoute ul {
     border-radius: 10px;
     background: #FFF2F0;
     border: none;
     padding: 2px 2px 3px;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
     -webkit-user-select: none;
-   -moz-user-select: none;
+    -moz-user-select: none;
     -ms-user-select: none;
-        user-select: none;
-}
-.TabAddonRoute{
-    position: relative;
-    font-family: 'Mulish', sans-serif; 
+    user-select: none;
 }
 
-.TabAddonRoute ul li{
+.TabAddonRoute {
+    position: relative;
+    font-family: 'Mulish', sans-serif;
+}
+
+.TabAddonRoute ul li {
     -webkit-box-flex: 1;
     -webkit-flex: 1 1 auto;
-       -moz-box-flex: 1;
-        -ms-flex: 1 1 auto;
-            flex: 1 1 auto;
-            text-align: center;
+    -moz-box-flex: 1;
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
+    text-align: center;
 }
-.TabAddonRoute ul li button{
+
+.TabAddonRoute ul li button {
     width: 100%;
     background: transparent !important;
     border: none !important;
-    border-radius: 10px !important; 
+    border-radius: 10px !important;
     color: #333333;
     font-size: 12px;
     font-style: normal;
@@ -41,38 +43,39 @@
     transition: all 300ms ease;
 }
 
-.TabAddonRoute ul li button[aria-selected="true"]{  
-color: #ffffff !important;   
+.TabAddonRoute ul li button[aria-selected="true"] {
+    color: #ffffff !important;
 }
 
-.TabAddonKey{
+.TabAddonKey {
     height: 36px;
     width: 50%;
-    background: #DC391B; 
-    border-radius: 10px; 
+    background: #DC391B;
+    border-radius: 10px;
     -webkit-transition: all 300ms ease;
     -o-transition: all 300ms ease;
     -moz-transition: all 300ms ease;
     transition: all 300ms ease;
     -webkit-box-shadow: 1px 1px 4px 0px rgba(0, 0, 0, 0.20) inset;
-     -moz-box-shadow: 1px 1px 4px 0px rgba(0, 0, 0, 0.20) inset;
-          box-shadow: 1px 1px 4px 0px rgba(0, 0, 0, 0.20) inset;
+    -moz-box-shadow: 1px 1px 4px 0px rgba(0, 0, 0, 0.20) inset;
+    box-shadow: 1px 1px 4px 0px rgba(0, 0, 0, 0.20) inset;
     position: absolute;
     left: 2px;
     top: 2px;
 }
-.TabAddonKey.Return{
-margin-left: 50%;
-left: -2px;
+
+.TabAddonKey.Return {
+    margin-left: 50%;
+    left: -2px;
 }
 
-.TabAddonRt{
+.TabAddonRt {
     position: relative;
     -webkit-animation-name: fadeInUp;
     animation-name: fadeInUp;
     -webkit-animation-duration: 260ms;
-    animation-duration: 260ms; 
-} 
+    animation-duration: 260ms;
+}
 
 
 @-webkit-keyframes fadeInUp {
@@ -103,20 +106,20 @@ left: -2px;
     }
 }
 
-.TabAddonRt ol{
-list-style: none;
-padding: 0;
-margin: 0; 
+.TabAddonRt ol {
+    list-style: none;
+    padding: 0;
+    margin: 0;
 }
 
-.TabAddonRt ol li{
+.TabAddonRt ol li {
     position: relative;
     padding-left: 29px;
     padding-bottom: 30px;
 }
 
- 
-.TabAddonRt ol li::before{
+
+.TabAddonRt ol li::before {
     content: '';
     height: 100%;
     position: absolute;
@@ -125,7 +128,7 @@ margin: 0;
     left: 4px;
 }
 
-.TabAddonRt ol li::after{
+.TabAddonRt ol li::after {
     content: '';
     border: solid 2px #dc391b;
     width: 10px;
@@ -136,23 +139,25 @@ margin: 0;
     border-radius: 3px;
     background-color: #fff;
 }
-.TabAddonRt ol li.Active::after{
+
+.TabAddonRt ol li.Active::after {
     background-color: #dc391b;
 }
 
-.TabAddonRt ol li:last-child{
+.TabAddonRt ol li:last-child {
     padding-bottom: 0;
 }
-.TabAddonRt ol li:last-child::before{
+
+.TabAddonRt ol li:last-child::before {
     display: none;
 }
 
-.TabAddonRtBtn{
+.TabAddonRtBtn {
     -webkit-transition: all 300ms ease;
     -o-transition: all 300ms ease;
     -moz-transition: all 300ms ease;
     transition: all 300ms ease;
-    box-shadow: none !important; 
+    box-shadow: none !important;
     color: #333;
     font-size: 12px;
     font-style: normal;
@@ -164,27 +169,44 @@ margin: 0;
     min-width: 80px;
 }
 
-.TabAddonRtBtn.Active{
+.TabAddonRtBtn.Active {
     color: #ffffff;
     background-color: #dc391b;
 }
 
-.TabARtSelected{
-    color: #9d9d9d; 
-font-size: 10px;
-font-style: italic;
-font-weight: 400;
-line-height: normal; 
-position: absolute;
-left: 119px;
-margin-top: 7px;
-text-transform: capitalize;
-letter-spacing: 0.2px;
+.TabARtSelected {
+    color: #9d9d9d;
+    font-size: 10px;
+    font-style: italic;
+    font-weight: 400;
+    line-height: normal;
+    position: absolute;
+    left: 119px;
+    margin-top: 7px;
+    text-transform: capitalize;
+    letter-spacing: 0.2px;
 }
- 
-.TabARtSelected, .TabAddonRt ol li::after{
+
+.TabARtSelected,
+.TabAddonRt ol li::after {
     -webkit-transition: all 300ms ease;
--o-transition: all 300ms ease;
--moz-transition: all 300ms ease;
-transition: all 300ms ease;
+    -o-transition: all 300ms ease;
+    -moz-transition: all 300ms ease;
+    transition: all 300ms ease;
 }
+
+
+/* responsive */
+@media only screen and (max-width:1199px) {
+    .TabAddonRoute ul {
+        margin-bottom: 18px;
+    }
+}
+
+@media only screen and (max-width:991px) {}
+
+@media only screen and (max-width:767px) {}
+
+@media only screen and (max-width:575px) {}
+
+@media only screen and (max-width:425px) {}

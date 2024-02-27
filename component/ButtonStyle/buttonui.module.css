@@ -76,3 +76,27 @@
     background: #DC391B;
     color: #ffffff;  
     }
+
+
+    
+/* responsive */ 
+@media only screen and (max-width:1199px) { 
+    .FlightOfdealBtn {
+        font-size: 15px;
+        min-width: 124px;     
+    }
+}
+
+@media only screen and (max-width:991px) {}
+
+@media only screen and (max-width:767px) {}
+
+@media only screen and (max-width:575px) {}
+
+@media only screen and (max-width:425px) {
+    .FlightOfdealBtn {
+        font-size: 14px;
+        min-width: 118px;     
+    }
+}
+
