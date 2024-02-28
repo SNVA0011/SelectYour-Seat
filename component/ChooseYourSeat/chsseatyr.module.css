@@ -455,7 +455,7 @@
 
 @media only screen and (max-width:991px) {
     .SeatDef::after {
-        background-size: 46%;
+        background-size: 16px;
     }
     .SeatDef {
         width: 38px;
@@ -529,6 +529,9 @@
 .AirPlTable thead th {
     font-weight: 700
 }
+.AirPlSpace{
+    width: 40px;
+}
 }
 
 @media only screen and (max-width:575px) {
@@ -549,7 +552,7 @@
         min-width: 50px;
     }
     .AirPlSpace{
-        width: 25px;
+        width: 26px;
     }
     .FillChsSeat {
         max-height: 450px;
