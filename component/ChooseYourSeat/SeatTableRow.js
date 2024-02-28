@@ -77,7 +77,9 @@ const SeatTableRow = ({ item, selected, selectBtn, index }) => {
                     </div>
                 </button>
             </td>
-            <td className={style.AirPlSpace}></td>
+            <td className={style.AirPlSpace}>
+                <span className={style.AirPlRowNameText}>{index}</span>
+            </td>
             <td>
                 <button className={`btn ${style.SeatDef} ${addSeatClass(item.D)}  ${addSeatClass(item.D)} ${addSeatClass(item.D)} ${addSeatClass(item.D)} ${SeatSelected(selected, index, 'D')}`}
                     disabled={addDisableAttr(item.D)}

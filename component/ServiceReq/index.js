@@ -53,10 +53,16 @@ const index = () => {
 
                     <SeatTypeName />
 
-                    <SeatTypeDepRet />
+                    <div className='d-none d-md-block'>
+                      <SeatTypeDepRet />
+                    </div>
                   </Col>
                   <Col xs={12} md={7} xl={8} className={style.ServiceTbCol}>
                     <ChooseYourSeat />
+
+                    <div className='d-md-none'>
+                      <SeatTypeDepRet />
+                    </div>
                   </Col>
                 </Row>
 
@@ -73,7 +79,7 @@ const index = () => {
                     </div>
                   </Col>
                   <Col xs={12} md={7} xl={8} className={style.ServiceTbCol}>
-                    <div className='mt-4 mt-md-0'>
+                    <div className='mt-3 mt-sm-4 mt-md-0'>
                       <ChooseAddons Type={'AddMeals'} Json={allMeals} />
                     </div>
 
@@ -95,7 +101,7 @@ const index = () => {
                     </div>
                   </Col>
                   <Col xs={12} md={7} xl={8} className={style.ServiceTbCol}>
-                    <div className='mt-4 mt-md-0'>
+                    <div className='mt-3 mt-sm-4 mt-md-0'>
                       <ChooseAddons Type={'AddBaggage'} Json={allBaggage} />
                     </div>
 
@@ -119,10 +125,10 @@ const index = () => {
           :
           <div className={style.ServiceReqDwrp}>
             <Row className='align-items-center'>
-              <Col xs={12} md={9} className={style.ServiceReqDone}>
+              <Col xs={8} className={style.ServiceReqDone}>
                 Seats, Meals & Baggage <small>Departure: 3A, 1 Meal  & 1 Bag  Added</small>
               </Col>
-              <Col xs={12} md={3} className='text-right'>
+              <Col xs={4} className={style.SerbtnAlignt}>
                 <button onClick={() => { setKey(0) }} className={`btn ${style.ServiceRqEditbtn}`}>
                   Edit <img src='/images/addon/edit-seat.png' />
                 </button>

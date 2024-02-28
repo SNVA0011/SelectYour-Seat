@@ -4,20 +4,30 @@ import Image from 'next/image'
 import Collapse from 'react-bootstrap/Collapse';
 import { Col, Row } from 'react-bootstrap';
 
-const CartRouteWay = ({ Title, Json, Type ,openCart, setCardOpen}) => {
+const CartRouteWay = ({ Title, Json, Type, openCartTyp, setCardOpenTyp }) => {
 
     const RouteFromTo = Title === 'Return' ? 'HYD-DEL' : 'DEL-HYD'
 
     return (
         <section className={Title === 'Return' ? 'mt-4 ' + style.ChsaddUlFadeRet : style.ChsaddUlFadeDep}>
-            <div className={style.ChsaddUlTitle} onClick={() => setCardOpen(!openCart)}>
-
+            <div className={style.ChsaddUlTitle} onClick={() => setCardOpenTyp(Title)}> 
                 <Row className='align-items-center'>
-                    <Col xs={6}>
+                    <Col xs={10}>
                         {Title}
+
+                        {Type == 'AddBaggage' && <span className='d-inline-block ml-1'>
+                            {Title === 'Return' && <>&#8226; (1 Bag)</>}
+                            {Title === 'Departure' && <>&#8226; (2 Bags)</>} Added
+                        </span>}
+
+                        {Type == 'AddMeals' && <span className='d-inline-block ml-1'>
+                            {Title === 'Return' && <>&#8226; (1 Meal)</>}
+                            {Title === 'Departure' && <>&#8226; (2 Meals)</>} Added
+                        </span>}
+
                     </Col>
-                    <Col xs={6} className="text-right d-md-none">
-                        <div className={`${style.DownCaret} ${openCart ? style.Active : ''}`}>
+                    <Col xs={2} className="text-right">
+                        <div className={`${style.DownCaret} ${openCartTyp == Title ? style.Active : ''}`}>
                             <Image
                                 src={`/images/addon/arrowup-seat.png`}
                                 alt={'arrowup-seat'}
@@ -26,11 +36,10 @@ const CartRouteWay = ({ Title, Json, Type ,openCart, setCardOpen}) => {
                             />
                         </div>
                     </Col>
-                </Row> 
-
+                </Row>
             </div>
 
-            <Collapse in={openCart}>
+            <Collapse in={openCartTyp == Title ? true : false}>
                 <ul className={style.ChsaddUl}>
                     {Json && Json.map((item, index) => {
                         return (

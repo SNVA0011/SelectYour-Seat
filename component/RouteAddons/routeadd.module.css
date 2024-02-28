@@ -198,15 +198,25 @@
 
 /* responsive */
 @media only screen and (max-width:1199px) {
-    .TabAddonRoute ul {
-        margin-bottom: 18px;
-    }
+ 
 }
 
-@media only screen and (max-width:991px) {}
+@media only screen and (max-width:991px) {
 
-@media only screen and (max-width:767px) {}
+}
 
-@media only screen and (max-width:575px) {}
+@media only screen and (max-width:767px) {
+    
 
-@media only screen and (max-width:425px) {}
+}
+
+@media only screen and (max-width:575px) {
+    
+    
+}
+
+@media only screen and (max-width:425px) {
+    .TabAddonRtBtn {
+        font-size: 11px;
+            }
+}

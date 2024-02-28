@@ -16,7 +16,7 @@
     background-size: 100% 100%;
     background-repeat: no-repeat;
     background-position: top center;
-}
+} 
 
 .AirplaneWrapper::after {
     content: '';
@@ -112,6 +112,12 @@
     transition: all 200ms ease;
 }
 
+.AirPlRowNameText{
+    display: none;
+    color: #dc391b;
+    font-weight: 700;
+}
+
 .SeatDef:focus,
 .SeatDef:hover,
 .SeatDef:active {
@@ -141,6 +147,8 @@
     background-color: #f84341;
     min-width: 83px;
 }
+
+
 
 .SeatDef.Disable .SeatDefTooltio::after {
     border-color: #f84341 transparent transparent transparent;
@@ -283,7 +291,7 @@
 }
 
 .SeatDefTooltio b{
-    font-weight: 800;
+    font-weight: 800; 
 }
 
 
@@ -361,7 +369,7 @@
 }
 
 .AirplaneBxExit img {
-    width: 30px;
+    width: 26px;
     image-rendering: -webkit-optimize-contrast;
 }
 
@@ -402,7 +410,11 @@
         width: 97%;
         height: 34px; 
     }
-
+    .SeatDefTooltio b{ 
+        margin: 2px 0 8px;
+        border-bottom: dashed 1px #484848;
+        padding-bottom: 9px;
+    }
     .SeatDef::after {
         background-size: 50%;
     }
@@ -433,7 +445,7 @@
 }
 
 .AirplaneBxExit img {
-    width: 28px; 
+    width: 24px; 
 }
 .AirplaneBxFooter {
     padding-bottom: 23%;
@@ -449,11 +461,110 @@
         width: 38px;
         height: 38px; 
     }
-
+    .AirplaneBxExit img {
+        width: 22px; 
+    }
 }
 
-@media only screen and (max-width:767px) {}
+@media only screen and (max-width:767px) {
+    .AirPlRowName {
+        width: 0;
+        padding: 0 !important;
+        font-size: 0 !important;
+    }
 
-@media only screen and (max-width:575px) {}
+    .AirPlRowNameText{
+        display: block;
+    }
+    .AirplaneWrapper { 
+        max-width: none;
+    }
+    .SeatDef {
+        width: 100%;
+        height: 34px; 
+    }
+    .AirPlTable th,
+    .AirPlTable td {
+        padding: 3px;
+    }
+    .AirplaneBxExit img {
+        width: 28px; 
+    }
+.AirPlTable tbody td {
+    padding-bottom: 5px;
+}
+ 
+.AirplaneBxBody { 
+    margin: 22px 0 19px;
+    padding: 0;
+}
+.AirplaneBxFooter {
+    padding-bottom: 20%;
+} 
+.AirplaneBxHeader img{
+   display: none;
+} 
+.AirplaneBxExit {
+    padding: 0 12px;
+}
+.AirplaneBxHeader{
+    padding-top: 0px;
+}
 
-@media only screen and (max-width:425px) {}
+.AirplaneBxFooter{
+    padding-bottom: 39px;
+}
+.AirplaneWrapper {
+    background-image: none; 
+    border-bottom: 0;
+}
+.FillChsSeat {
+    max-height: 515px;
+    min-height: 515px;  
+    margin-left: -8px;
+    margin-right: -8px;
+    border: solid 1px #eee;
+    border-radius: 10px;
+}
+.AirPlTable thead th {
+    font-weight: 700
+}
+}
+
+@media only screen and (max-width:575px) {
+    .AirplaneBxBody {
+        margin: 15px 0 19px;
+        padding: 0;
+    } 
+ 
+    .AirplaneBxExit img {
+        width: 24px; 
+    }
+
+    .SeatDefTooltio {
+        min-width: 48px; 
+        font-size: 10px;
+    }
+    .SeatDef.Disable .SeatDefTooltio {
+        min-width: 50px;
+    }
+    .AirPlSpace{
+        width: 25px;
+    }
+    .FillChsSeat {
+        max-height: 450px;
+        min-height: 450px;
+    }
+}
+ 
+@media only screen and (max-width:425px) {
+    .AirplaneBxExit img {
+        width: 22px; 
+    }
+   
+    .SeatDefTooltio { 
+        font-size: 9px;
+        padding: 8px 5px;
+    }
+
+}

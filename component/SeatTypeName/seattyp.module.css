@@ -80,8 +80,54 @@
 
 @media only screen and (max-width:991px) {}
 
-@media only screen and (max-width:767px) {}
+@media only screen and (max-width:767px) {
+    .SeatTypeName{
+        padding: 0;
+        background: transparent;
+        margin-bottom: 17px;
+        margin-top: 21px;
+        text-align: center;
+    }
+    .SeatTypeName ul{
+        margin-bottom: 8px;
+        margin-left: -12px;
+        margin-right: -12px;
+        line-height: 1.4;
+    }
+    .SeatTypeName ul li {
+        width: auto;
+        padding-left: 14px;
+        padding-right: 14px;
+        margin-bottom: 0px;
+        font-size: 12px;
+        border-right: solid 1px #e7e7e7;
+    }
+    .SeatTypeName ul li:last-child{
+        border-right: 0;
+    }
+    .SeatTypeName label {
+        width: 12px;
+        height: 12px;
+        margin-right: 8px;
+    }
+}
 
-@media only screen and (max-width:575px) {}
+@media only screen and (max-width:575px) {
+    .SeatTypeName label {
+        width: 8px;
+        height: 8px;
+        margin-right: 6px;
+        border-radius: 2px;
+    }
+    .SeatTypeName ul li { 
+        padding-left: 10px;
+        padding-right: 10px; 
+        font-size: 11px;
+    } 
+}
 
-@media only screen and (max-width:425px) {}
+@media only screen and (max-width:425px) {
+    .SeatTypeName ul li {  
+        font-size: 10px;
+    }
+}

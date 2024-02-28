@@ -1,11 +1,11 @@
 .ChsaddWrapper {
     max-height: 422px;
-    overflow-x: hidden;
-    overflow-y: auto;
+    overflow-y: scroll; 
+    overflow-x: hidden; 
     margin-top: 30px;
     border-radius: 10px;
     background: #FFF2F0;
-    padding: 20px;
+    padding: 15px;
     font-family: 'Mulish', sans-serif;
 }
 
@@ -195,6 +195,7 @@
     font-weight: 600;
     line-height: normal;
     margin-bottom: -4px;
+    cursor: pointer;
 }
 
 .ChsaddUlFadeDep,
@@ -204,52 +205,19 @@
 }
 
 
-.ChsaddUlFadeDep li:last-child,
-.ChsaddUlFadeRet li:last-child {
-    -webkit-animation-name: fadeInUp;
-    animation-name: fadeInUp;
-    -webkit-animation-duration: 0.6s;
-    animation-duration: 0.6s;
-}
 
 .ChsaddRouteMt {
     margin-top: 19px;
 }
 
 
-@-webkit-keyframes fadeInUp {
-    0% {
-        opacity: 0;
-        -webkit-transform: translate3d(0, 50%, 0);
-        transform: translate3d(0, 50%, 0);
-    }
 
-    100% {
-        opacity: 1;
-        -webkit-transform: none;
-        transform: none;
-    }
-}
-
-@keyframes fadeInUp {
-    0% {
-        opacity: 0;
-        -webkit-transform: translate3d(0, 50%, 0);
-        transform: translate3d(0, 50%, 0);
-    }
-
-    100% {
-        opacity: 1;
-        -webkit-transform: none;
-        transform: none;
-    }
-}
 
 .DownCaret {
-    -webkit-transition: all 300ms cubic-bezier(.47, 1.64, .41, .8);
-    -o-transition: all 300ms cubic-bezier(.47, 1.64, .41, .8);
-    -moz-transition: all 300ms cubic-bezier(.47, 1.64, .41, .8);
-    transition: all 300ms cubic-bezier(.47, 1.64, .41, .8);
+    -webkit-transition: all 200ms ease;
+    -o-transition: all 200ms ease;
+    -moz-transition: all 200ms ease;
+    transition: all 200ms ease;
     display: inline-block;
 }
 
@@ -260,32 +228,88 @@
     -o-transform: rotate(180deg);
     transform: rotate(180deg);
 }
+ 
 
-.ChsaddWrapperHr {
-    margin: 21px 0 -4px;
+.ChsaddWrapperHr { 
+      margin: 19px 0 -5px;
     display: block;
-    border-top-color: #ffe3df;
-    display: none;
+    border-top-color: #ffe3df; 
+    pointer-events: none;
 }
 
+.TabCrtButtonWrp{
+    border-radius: 10px;
+    background: #ffffff;
+    border: none;
+    padding: 2px 2px 3px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    margin-bottom: 18px;
+    position: -o-sticky;
+    position: -ms-sticky;
+    position: -moz-sticky;
+    position: -webkit-sticky;
+    position: sticky;
+ top: 4px; 
+ z-index: 5;
+ -o-box-shadow: 0 0 11px rgb(220 57 27 / 10%);
+ -ms-box-shadow: 0 0 11px rgb(220 57 27 / 10%);
+ -moz-box-shadow: 0 0 11px rgb(220 57 27 / 10%);
+ -webkit-box-shadow: 0 0 11px rgb(220 57 27 / 10%);
+ box-shadow: 0 0 11px rgb(220 57 27 / 10%);
 
-/* responsive */
-@media (min-width: 768px) { 
-    .ChsaddUlFadeRet {
-        -webkit-animation-name: fadeInUp;
-        animation-name: fadeInUp;
-        -webkit-animation-duration: 0.6s;
-        animation-duration: 0.6s;
-        -webkit-animation-delay: 0.8s;
-        -moz-animation-delay: 0.8s;
-        -o-animation-delay: 0.8s;
-        animation-delay: 0.8s;
-    }
-    .ChsaddWrapper .ChsaddUl {
-display: block;
-    }
+}
+.TabAddonKeySlide{
+    height: 36px;
+    width: 50%;
+    background: #DC391B;
+    border-radius: 10px;
+    -webkit-transition: all 300ms ease;
+    -o-transition: all 300ms ease;
+    -moz-transition: all 300ms ease;
+    transition: all 300ms ease;
+    -webkit-box-shadow: 1px 1px 4px 0px rgba(0, 0, 0, 0.20) inset;
+    -moz-box-shadow: 1px 1px 4px 0px rgba(0, 0, 0, 0.20) inset;
+    box-shadow: 1px 1px 4px 0px rgba(0, 0, 0, 0.20) inset;
+    position: absolute;
+    left: 2px;
+    top: 2px;
+}
+ 
+.TabAddonKeySlide.Rtr{
+    margin-left: 50%;
+    left: -2px;
 }
 
+.TabCrtButton{
+    width: 100%;
+    background: transparent !important;
+    border: none !important;
+    border-radius: 10px !important;
+    color: #333333;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    height: 36px;
+    position: relative;
+    z-index: 3;
+    -webkit-transition: all 300ms ease;
+    -o-transition: all 300ms ease;
+    -moz-transition: all 300ms ease;
+    transition: all 300ms ease;
+}
+
+.TabCrtButton, .TabCrtButton:active, .TabCrtButton:focus, .TabCrtButton:hover{
+    box-shadow: none;
+}
+.TabCrtButton.Active{ 
+    color: #ffffff; 
+}
+
+/* responsive */ 
 @media (max-width: 1399px) {
     .ChsaddImg {
         width: 46px;
@@ -334,27 +358,63 @@ display: block;
 
 }
 
-@media (max-width: 767px) {
-    .ChsaddWrapperHr {
-        display: block;
-    }
+@media (max-width: 767px) { 
     .ChsaddWrapper { 
-        padding: 19px 16px 23px;
-        max-height: 450px;
+        padding: 6px 16px 12px; 
     }
     .ChsaddUlTitle {
 font-size: 12px;
+padding-top: 12px;
+padding-bottom: 12px;
     }
     
 .ChsaddRouteMt {
     margin-top: 22px;
 }
+.ChsaddImg {
+    width: 60px;
+    min-width: 60px;
+}
+.ChsaddUl {
+font-size: 13px;
+}
+.ChsaddBtWrap{
+    margin-top: 8px;
+}
+.TabCrtButtonWrp{
+    margin-top: 4px;
+    margin-bottom: 10px; 
+}
+.ChsaddWrapperHr {
+    margin: 11px 0 -15px
+}
+}
 
+@media (max-width: 575px) {
+    .ChsaddBody {
+        padding-left: 16px;
+    }
+    
+}
+
+@media only screen and (max-width:500px) { 
+    .ChsaddImg {
+        width: 50px;
+        min-width: 50px;
+    }
+    .ChsaddUl {
+        font-size: 12px;
+        }
+     
+        .ChsPrice{
+            font-size: 12px;
+            font-weight: 800;
+        }
 }
 
 @media (max-width: 425px) {
     .ChsaddWrapper { 
-        padding: 19px 12px 23px;
+        padding: 6px 12px 12px;
         margin-top: 25px;
     }
 }

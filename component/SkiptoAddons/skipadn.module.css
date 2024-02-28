@@ -31,9 +31,18 @@ button.SkiptoBtn:hover{
 
 @media only screen and (max-width:991px) {}
 
-@media only screen and (max-width:767px) {}
+@media only screen and (max-width:767px) {
+    .SkipContinue{
+        margin-bottom: 6px;
+        margin-top: 24px;
+    }
+}
 
-@media only screen and (max-width:575px) {}
+@media only screen and (max-width:575px) {
+    .SkipContinue{
+        margin-bottom: 12px; 
+    }
+}
 
 @media only screen and (max-width:425px) {
     .SkiptoBtn{
