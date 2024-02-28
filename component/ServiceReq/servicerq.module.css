@@ -256,16 +256,7 @@
     .SerTbNavItem {
         position: relative;
         z-index: 2;
-    }
-
-    .ServiceTbcont::before {
-        content: '';
-        position: absolute;
-        width: 106%;
-        left: -3%;
-        border-top: solid 1px #f3f7ff;
-        top: -4px;
-    }
+    } 
 }
 
 @media (max-width: 1199px) {
@@ -303,12 +294,7 @@
 
     .ServiceReq {
         padding: 18px;
-    }
-
-    .ServiceTbcont::before {
-        top: -3px;
-    }
-
+    } 
     .SerTbNavBtn::after {
         height: 3px;
     }
@@ -339,7 +325,9 @@ margin-bottom: 22px;
         text-align: center;
         padding-right: 12px;
     }
-    
+        
+   
+ 
 }
 
 @media (max-width: 575px) {
@@ -400,6 +388,7 @@ margin-bottom: 22px;
     .ServiceReqDone small {
         font-size: 11px; 
     } 
+
 }
 
 @media (max-width: 475px) {
