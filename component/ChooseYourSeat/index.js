@@ -13,8 +13,10 @@ const index = () => {
 
     return (
         <>
-
             <div className={style.FillChsSeat}>
+
+                <div className={`${style.SeatWings} ${style.LeftWng}`}><span>Wings</span></div>
+
                 <div className={style.AirplaneWrapper}>
                     <div className={style.AirplaneBxHeader}>
                         <img src='/images/addon/airplaneseat-head.png' />
@@ -55,13 +57,13 @@ const index = () => {
                                     const Count = index + 1;
                                     return (
                                         <SeatTableRow
-                                        item={item}
-                                          selected={selected}
-                                         selectBtn={selectBtn}
-                                         index={Count} />
+                                            item={item}
+                                            selected={selected}
+                                            selectBtn={selectBtn}
+                                            index={Count} />
                                     )
                                 })}
- 
+
                             </tbody>
                         </table>
                     </div>
@@ -83,6 +85,9 @@ const index = () => {
 
                     <div className={style.AirplaneBxFooter}></div>
                 </div>
+
+                <div className={`${style.SeatWings} ${style.rightWng}`}><span>Wings</span></div>
+
             </div>
         </>
     )

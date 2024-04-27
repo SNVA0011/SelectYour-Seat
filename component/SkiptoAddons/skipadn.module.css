@@ -35,14 +35,37 @@ button.SkiptoBtn:hover{
     .SkipContinue{
         margin-bottom: 6px;
         margin-top: 24px;
+        position: -moz-sticky;
+        position: -ms-sticky;
+        position: -o-sticky;
+        position: sticky;
+        bottom: 0;
+        z-index: 8;
+        background-color: #fff;
+        padding: 12px 0;
     }
-}
 
-@media only screen and (max-width:575px) {
-    .SkipContinue{
-        margin-bottom: 12px; 
+    .SkipContinue::after,
+    .SkipContinue::before{
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-color: #fff;
+        top: 0;
+    }
+    .SkipContinue::before{
+        left: -15px;
+    }
+    .SkipContinue::after{
+        right: -15px;
+    }
+    .SkipContinueRow{
+        position: relative;
+        z-index: 2;
     }
 }
+ 
 
 @media only screen and (max-width:425px) {
     .SkiptoBtn{

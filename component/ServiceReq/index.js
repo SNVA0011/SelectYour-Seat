@@ -23,7 +23,7 @@ const index = () => {
         Add-Ons
         <span>Service Requests (Optional)</span>
       </div>
-      <div className={style.ServiceReq}>
+      <div className={`${style.ServiceReq} ${key < 3 ? style.Process : style.Complete }`}>
 
         {key < 3 ? <div className='w-100'>
           <Tab.Container onSelect={(k) => setKey(k)} activeKey={key} value={key}>
@@ -57,7 +57,7 @@ const index = () => {
                       <SeatTypeDepRet />
                     </div>
                   </Col>
-                  <Col xs={12} md={7} xl={8} className={style.ServiceTbCol}>
+                  <Col xs={12} md={7} xl={8} className={`px-0 ${style.ServiceTbCol}`}>
                     <ChooseYourSeat />
 
                     <div className='d-md-none'>
@@ -124,7 +124,7 @@ const index = () => {
 
           :
           <div className={style.ServiceReqDwrp}>
-            <Row className='align-items-center'>
+            <Row className='align-items-center py-3 py-md-0'>
               <Col xs={8} className={style.ServiceReqDone}>
                 Seats, Meals & Baggage <small>Departure: 3A, 1 Meal  & 1 Bag  Added</small>
               </Col>

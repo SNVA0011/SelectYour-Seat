@@ -6,7 +6,7 @@ import { Col, Row } from 'react-bootstrap'
 const index = ({ContinueBtn, SkiptoAddbtn}) => {
     return (
         <div className={style.SkipContinue}>
-            <Row className='align-items-center'>
+            <Row className={`align-items-center ${style.SkipContinueRow}`}>
                 <Col xs={6}>
                 <ButtonStyle
                 content={'Continue'}
